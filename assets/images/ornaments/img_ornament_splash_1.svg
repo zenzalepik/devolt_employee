@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="229"
+   height="137"
+   viewBox="0 0 229 137"
+   fill="none"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="img_ornament_splash_1.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.1242771"
+     inkscape:cx="114.86261"
+     inkscape:cy="92.502058"
+     inkscape:window-width="1366"
+     inkscape:window-height="720"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30" />
+  <g
+     clip-path="url(#clip0_295_679)"
+     id="g13">
+    <rect
+       width="414"
+       height="896"
+       fill="#2051E5"
+       id="rect2"
+       style="fill:#2051e5;fill-opacity:0.00451389" />
+    <mask
+       id="mask0_295_679"
+       style="mask-type:alpha"
+       maskUnits="userSpaceOnUse"
+       x="0"
+       y="0"
+       width="414"
+       height="137">
+      <path
+         d="M0 0H414V117C414 128.046 405.046 137 394 137H20C8.95432 137 0 128.046 0 117V0Z"
+         fill="#2051E5"
+         id="path4" />
+    </mask>
+    <g
+       mask="url(#mask0_295_679)"
+       id="g11">
+      <path
+         d="M206.173 -3.05053C196.078 45.2645 144.979 76.9516 92.041 67.7246C39.1025 58.4976 4.37116 11.8506 14.4663 -36.4644C24.5614 -84.7794 75.6602 -116.466 128.599 -107.239C181.537 -98.0125 216.268 -51.3655 206.173 -3.05053Z"
+         fill="url(#paint0_linear_295_679)"
+         fill-opacity="0.1"
+         id="path7" />
+      <path
+         d="M96.7935 44.9792C86.6983 93.2942 35.5995 124.981 -17.3389 115.754C-70.2773 106.527 -105.009 59.8804 -94.9136 11.5654C-84.8185 -36.7496 -33.7197 -68.4367 19.2188 -59.2097C72.1572 -49.9827 106.889 -3.33575 96.7935 44.9792Z"
+         fill="url(#paint1_linear_295_679)"
+         fill-opacity="0.1"
+         id="path9" />
+    </g>
+  </g>
+  <defs
+     id="defs28">
+    <linearGradient
+       id="paint0_linear_295_679"
+       x1="19.2188"
+       y1="-59.2098"
+       x2="-11.4556"
+       y2="116.78"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#2051E5"
+         id="stop15" />
+      <stop
+         offset="1"
+         stop-color="#DEE6FF"
+         id="stop17" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_295_679"
+       x1="19.2188"
+       y1="-59.2098"
+       x2="-11.4556"
+       y2="116.78"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#2051E5"
+         id="stop20" />
+      <stop
+         offset="1"
+         stop-color="#DEE6FF"
+         id="stop22" />
+    </linearGradient>
+    <clipPath
+       id="clip0_295_679">
+      <rect
+         width="229"
+         height="137"
+         fill="white"
+         id="rect25" />
+    </clipPath>
+  </defs>
+</svg>

@@ -1,0 +1,110 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: ChangePasswordPage(),
+    );
+  }
+}
+
+class ChangePasswordPage extends StatefulWidget {
+  @override
+  State<ChangePasswordPage> createState() => _ChangePasswordPageState();
+}
+
+class _ChangePasswordPageState extends State<ChangePasswordPage> {
+  TextEditingController _idController = TextEditingController();
+  TextEditingController _newPasswordController = TextEditingController();
+  TextEditingController _confirmPasswordController = TextEditingController();
+
+  String _responseMessage = '';
+
+Future<void> _submitData() async {
+    String id = _idController.text;
+    String newPassword = _newPasswordController.text;
+    String confirmPassword = _confirmPasswordController.text;
+
+    // Request body as a Map
+    Map<String, dynamic> body = {
+      "id": id,
+      "password": newPassword,
+      "password_confirmation": confirmPassword,
+    };
+
+    // Request headers
+    Map<String, String> headers = {
+      "Accept": "application/vnd.api+json",
+      "Content-Type": "application/vnd.api+json",
+      "Authorization": "Bearer 195|WiSWvEBlZFZDYODdWYFj9L8m71mZ5jIUrATLjM8V",
+    };
+
+    // API URL
+    String apiUrl = "https://dyvoltapi.programmerbandung.my.id/api/user/changepass";
+
+    // Sending POST request
+    http.Response response = await http.post(Uri.parse(apiUrl),
+        body: jsonEncode(body), // Convert body to JSON string
+        headers: headers);
+
+    // Handling the response
+    if (response.statusCode == 200) {
+      var responseData = jsonDecode(response.body);
+      String message = responseData["message"];
+      setState(() {
+        _responseMessage = "Password Berhasil Diperbarui: $message";
+      });
+    } else {
+      var errorData = jsonDecode(response.body);
+      String errorMessage = errorData["message"];
+      setState(() {
+        _responseMessage = "Gagal memperbarui password: $errorMessage";
+      });
+    }
+  } 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Change Password"),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextField(
+              controller: _idController,
+              decoration: InputDecoration(labelText: "User ID"),
+            ),
+            TextField(
+              controller: _newPasswordController,
+              decoration: InputDecoration(labelText: "New Password"),
+              obscureText: true,
+            ),
+            TextField(
+              controller: _confirmPasswordController,
+              decoration: InputDecoration(labelText: "Confirm Password"),
+              obscureText: true,
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _submitData,
+              child: Text("Submit"),
+            ),
+            SizedBox(height: 20),
+            Text(_responseMessage),
+          ],
+        ),
+      ),
+    );
+  }
+}
